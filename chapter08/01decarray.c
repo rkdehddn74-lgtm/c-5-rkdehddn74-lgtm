@@ -1,10 +1,12 @@
 #include <stdio.h>
 
 // SIZE라는 이름으로 정수 5를 나타내는 매크로 상수를 정의하세요
+#define SIZE 5
 
 int main(void)
 {
 	//배열선언
+	int score[SIZE]; //int score[5];
 	// 매크로 상수 SIZE 크기의 int형 배열 score를 선언하세요
 
 	//배열 원소에 값 저장
@@ -12,8 +14,17 @@ int main(void)
 	// score[3]에는 값을 저장하지 마세요 (쓰레기 값이 저장됩니다)
 	// score[4]에 91을 저장하세요
 
+	score[0] =78;
+	score[1] =97;
+	score[2] =85;
+
+	score[4] =91;
+	//score[5] = 50; [문법 오류 발생]
+
 	//배열원소 출력
 	// 0부터 SIZE 미만까지 반복하는 for문을 작성하고, 각 원소를 printf("%d  ", score[i]); 형식으로 출력하세요
+	for (int i = 0; i < SIZE; i++)
+	printf("%d ", score[i]);
 	printf("\n");
 
 	return 0;
