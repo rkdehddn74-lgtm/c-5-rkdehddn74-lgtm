@@ -1,19 +1,31 @@
 #include <stdio.h>
 
+// SIZE라는 이름으로 정수 5를 나타내는 매크로 상수를 정의하세요
+#define SIZE 5
+
 int main(void)
 {
-	// 3, 4, 5, 7, 9로 초기화된 int형 배열 data를 선언하세요
-	printf("%d %d\n", sizeof(data), (int) sizeof(data[0]));
-	printf("배열 data 크기 == %d\n", (int) (sizeof(data) / sizeof(data[0])));
+	//배열선언
+	int score[SIZE]; //int score[5];
+	// 매크로 상수 SIZE 크기의 int형 배열 score를 선언하세요
 
-	//4 x 3 행렬
-	// 열 크기가 2인 double형 2차원 배열 x를 { {1.2, 2.3}, {7.3, 8.9} }로 초기화하세요
-	printf("%d %d ", (int) sizeof(x), (int) sizeof(x[0]));
-	printf("%d %d\n", (int) sizeof(x[1]), (int) sizeof(x[0][0]));
-	// sizeof를 사용해 x의 행수를 저장하는 int형 변수 rowsize를 선언하세요
-	// sizeof를 사용해 x의 열수를 저장하는 int형 변수 colsize를 선언하세요
-	printf("이차원 배열 x: 행수 = %d  열수 = %d\n", rowsize, colsize);
-	printf("이차원 배열 x: 전체 원소 수 = %d\n", (int) (sizeof(x) / sizeof(x[0][0])));
+	//배열 원소에 값 저장
+	// score[0]에 78, score[1]에 97, score[2]에 85를 저장하세요
+	// score[3]에는 값을 저장하지 마세요 (쓰레기 값이 저장됩니다)
+	// score[4]에 91을 저장하세요
+
+	score[0] =78;
+	score[1] =97;
+	score[2] =85;
+
+	score[4] =91;
+	//score[5] = 50; [문법 오류 발생]
+
+	//배열원소 출력
+	// 0부터 SIZE 미만까지 반복하는 for문을 작성하고, 각 원소를 printf("%d  ", score[i]); 형식으로 출력하세요
+	for (int i = 0; i < SIZE; i++)
+	printf("%d ", score[i]);
+	printf("\n");
 
 	return 0;
 }
